@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 140px;
   margin-bottom: 20px;
 }
 
@@ -41,4 +41,52 @@ body {
 
 .boton-portada:hover {
   background-color: #ad1457;
+}
+
+.contenedor {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.producto {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 220px;
+  background-color: #fff0f6;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  color: #d81b60;
+}
+
+.producto button {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.producto button:hover {
+  background-color: #ad1457;
+}
+
+.whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
 }
