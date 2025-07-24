@@ -4,25 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrito - SublimaCath</title>
+  <title>Carrito | SublimaCath</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="titulo-nav">SublimaCath</a>
+    <div class="logo-nombre">
+      <img src="logo_sin_fondo.png" alt="Logo SublimaCath" class="logo-portada"/>
+      <span class="titulo-nav">SublimaCath</span>
+    </div>
     <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
       <li><a href="productos.html">Productos</a></li>
-      <li><a href="carrito.html">Carrito</a></li>
       <li><a href="contacto.html">Contacto y Redes</a></li>
     </ul>
   </nav>
 
-  <section class="carrito">
+  <section class="info">
     <h2>Carrito de Compras</h2>
-    <ul id="lista-carrito"></ul>
-    <p>Total: $<span id="total">0</span></p>
+    <p>Producto 1: Taza personalizada - $5.000</p>
+    <p>Producto 2: Vinilo decorativo - $3.500</p>
+    <hr />
+    <p><strong>Total: $8.500</strong></p>
+    <button>Proceder al pago</button>
   </section>
-
-  <script src="script.js"></script>
 </body>
 </html>

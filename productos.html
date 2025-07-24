@@ -4,30 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Productos - SublimaCath</title>
+  <title>Productos | SublimaCath</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="titulo-nav">SublimaCath</a>
+    <div class="logo-nombre">
+      <img src="logo_sin_fondo.png" alt="Logo SublimaCath" class="logo-portada"/>
+      <span class="titulo-nav">SublimaCath</span>
+    </div>
     <ul class="menu">
-      <li><a href="productos.html">Productos</a></li>
+      <li><a href="index.html">Inicio</a></li>
       <li><a href="carrito.html">Carrito</a></li>
       <li><a href="contacto.html">Contacto y Redes</a></li>
     </ul>
   </nav>
 
-  <section class="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="producto">
-      <img src="https://via.placeholder.com/200x200.png?text=Taza+Sublimada" alt="Producto 1" />
-      <h3>Taza Sublimada</h3>
-      <p>$5.000</p>
-      <button onclick="agregarAlCarrito('Taza Sublimada', 5000)">Agregar al carrito</button>
+  <section class="info">
+    <h2>Productos</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="taza1.jpg" alt="Taza personalizada" />
+        <h3>Taza personalizada</h3>
+        <p>$5.000</p>
+        <button>Añadir al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="vinilo1.jpg" alt="Vinilo decorativo" />
+        <h3>Vinilo decorativo</h3>
+        <p>$3.500</p>
+        <button>Añadir al carrito</button>
+      </div>
     </div>
-    <!-- Puedes añadir más productos aquí -->
   </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
