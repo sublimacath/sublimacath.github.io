@@ -1,44 +1,47 @@
-
 body {
+  font-family: sans-serif;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #333333;
+  padding: 0;
 }
-
-.portada {
-  background: linear-gradient(#fde4ec, #ffffff);
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.logo {
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-.portada h1 {
-  font-size: 36px;
-  color: #d81b60;
-  margin: 10px 0;
-}
-
-.portada p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.boton-portada {
-  display: inline-block;
-  background-color: #d81b60;
+header {
+  background-color: #ff6600;
   color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  padding: 1rem;
+  text-align: center;
 }
-
-.boton-portada:hover {
-  background-color: #ad1457;
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding: 2rem;
+}
+.producto {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+button, .boton-pago {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover, .boton-pago:hover {
+  background-color: #e65c00;
+}
+input, textarea {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0.5rem;
+}
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
 }

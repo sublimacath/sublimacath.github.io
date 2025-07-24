@@ -1,29 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SublimaCath</title>
+  <title>Sublimacath</title>
+  <meta property="og:title" content="Sublimacath - Productos Personalizados" />
+  <meta property="og:description" content="Tienda de sublimación y vinilos adhesivos. Personaliza tu mundo con Sublimacath." />
+  <meta property="og:image" content="https://sublimacath.github.io/img/portada.jpg" />
+  <meta property="og:url" content="https://sublimacath.github.io" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- PORTADA -->
-  <header class="portada">
-    <img src="logo.png" alt="Logo SublimaCath" class="logo">
-    <h1>SublimaCath</h1>
-    <p>Productos personalizados con amor</p>
-    <a href="#productos" class="boton-portada">Ver productos</a>
+  <header>
+    <h1>Sublimacath</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#carrito">Carrito</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#envios">Envíos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <!-- SECCIÓN PRODUCTOS -->
-  <section id="productos">
-    <h2>Nuestros Productos</h2>
-    <!-- Aquí van tus productos -->
+  <section id="inicio">
+    <h2>Bienvenida a Sublimacath</h2>
+    <p>Personaliza tu mundo con nuestros productos de sublimación y vinilos adhesivos.</p>
   </section>
 
-  <!-- Aquí sigue el resto de tu página (carrito, contacto, etc.) -->
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="producto">
+      <img src="https://via.placeholder.com/150" alt="Tazón personalizado">
+      <h3>Tazón personalizado</h3>
+      <p>$5.000</p>
+      <p>Tazón sublimado con diseño personalizado a elección.</p>
+      <button onclick="agregarAlCarrito('Tazón personalizado', 5000)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/150" alt="Vinilo decorativo">
+      <h3>Vinilo decorativo</h3>
+      <p>$3.000</p>
+      <p>Vinilo adhesivo para decorar paredes, notebooks y más.</p>
+      <button onclick="agregarAlCarrito('Vinilo decorativo', 3000)">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </section>
+
+  <section id="pagos">
+    <h2>Pagos</h2>
+    <p>Puedes pagar con Flow o por transferencia:</p>
+    <a href="https://www.flow.cl/app/webpay/index.html?token=EJEMPLO" target="_blank" class="boton-pago">Pagar con Flow</a>
+    <h3>Transferencia directa:</h3>
+    <ul>
+      <li>Banco: BancoEstado</li>
+      <li>Cuenta: 123456789</li>
+      <li>Nombre: Catherine Gómez</li>
+      <li>RUT: 12.345.678-9</li>
+      <li>Email: contacto@sublimacath.cl</li>
+    </ul>
+  </section>
+
+  <section id="envios">
+    <h2>Envíos</h2>
+    <p>Realizamos envíos a todo Chile vía Starken y Chilexpress.</p>
+    <ul>
+      <li>✅ Envío por pagar o prepago</li>
+      <li>📦 Entregamos en sucursal o domicilio</li>
+      <li>🚚 Despacho dentro de 24-48 horas hábiles</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form action="mailto:contacto@sublimacath.cl" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>O escríbenos directo al <a href="https://wa.me/56912345678" target="_blank">WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>Síguenos: 
+      <a href="https://instagram.com/sublimacath" target="_blank">Instagram</a> | 
+      <a href="https://facebook.com/sublimacath" target="_blank">Facebook</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
