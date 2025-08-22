@@ -1,102 +1,148 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+/* General */
 body {
-  background-color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
   color: #333;
 }
+
+/* Navbar */
 .navbar {
-  background-color: #c2185b;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-}
-.logo-portada {
-  height: 60px;
-}
-.titulo-nav {
-  font-size: 1.5rem;
-  font-weight: bold;
+  background: black;
   color: white;
-  margin-left: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
 }
-.menu {
+
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1rem;
 }
-.menu li a {
+
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-.portada {
-  position: relative;
-  background: url('portada_tazas_vinilos.jpg') center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #000, #FFD700, #00BFFF, #FF00FF);
+  color: white;
+}
+
+/* Productos */
+.productos {
+  padding: 2rem;
   text-align: center;
 }
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.5);
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
-.portada-contenido {
-  position: relative;
-  color: white;
-  z-index: 1;
+
+.producto {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
-.boton-portada {
-  background-color: #f06292;
-  padding: 10px 20px;
+
+.producto img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.producto button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: black;
   color: white;
   border: none;
   border-radius: 8px;
-  margin-top: 1rem;
-  display: inline-block;
-  text-decoration: none;
-}
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #fce4ec;
-  padding: 2rem;
-}
-.info-box {
-  flex: 1 1 250px;
-  margin: 1rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
+.producto button:hover {
+  background: #FFD700;
+  color: black;
+}
+
+/* Carrito */
+.carrito {
+  padding: 2rem;
+}
+
+#carrito-items {
+  list-style: none;
+  padding: 0;
+}
+
+#carrito-items li {
+  margin: 0.5rem 0;
+}
+
+/* Contacto */
+.contacto {
+  padding: 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contacto a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contacto a:hover {
+  color: #FFD700;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: black;
+  color: white;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .navbar {
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    background: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
   }
-  .menu {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
+
+  .nav-links.active {
+    display: flex;
   }
-  .logo-portada {
-    height: 50px;
-  }
-  .portada {
-    height: 60vh;
-    background-position: center;
+
+  .menu-toggle {
+    display: block;
   }
 }

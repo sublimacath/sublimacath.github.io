@@ -1,47 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SublimaCath</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SublimaCath - Personaliza tu mundo</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-nombre">
-      <img src="logo_sin_fondo.png" alt="Logo SublimaCath" class="logo-portada"/>
-      <span class="titulo-nav">SublimaCath</span>
-    </div>
-    <ul class="menu">
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="carrito.html">Carrito</a></li>
-      <li><a href="contacto.html">Contacto y Redes</a></li>
-    </ul>
-  </nav>
-
-  <header class="portada portada-con-imagen">
-    <div class="overlay"></div>
-    <div class="portada-contenido portada-central">
-      <h1>Bienvenida a SublimaCath</h1>
-      <p>Diseños únicos en tazas, vinilos, textiles y más</p>
-      <a href="productos.html" class="boton-portada">Ver productos</a>
-    </div>
+  <!-- Barra de navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SublimaCath</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#carrito">Carrito 🛒 <span id="cart-count">0</span></a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
   </header>
 
-  <section class="info">
-    <div class="info-box">
-      <h3>Envíos</h3>
-      <p>Realizamos envíos por Starken y Blue Express a todo Chile.</p>
-    </div>
-    <div class="info-box">
-      <h3>Productos Personalizados</h3>
-      <p>Trabajamos sobre pedido con nombres, fotos, diseños únicos para ti.</p>
-    </div>
-    <div class="info-box">
-      <h3>Pagos</h3>
-      <p>Aceptamos pagos vía WebPay y Transferencia bancaria.</p>
+  <!-- Sección inicio -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenidos a SublimaCath</h1>
+    <p>Personaliza tu mundo con sublimación única</p>
+  </section>
+
+  <!-- Sección productos -->
+  <section id="productos" class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid" id="productos-lista">
+      <!-- Productos de ejemplo -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Taza personalizada">
+        <h3>Taza personalizada</h3>
+        <p>$6.000</p>
+        <button onclick="agregarAlCarrito('Taza personalizada', 6000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Polera personalizada">
+        <h3>Polera personalizada</h3>
+        <p>$12.000</p>
+        <button onclick="agregarAlCarrito('Polera personalizada', 12000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Cojín personalizado">
+        <h3>Cojín personalizado</h3>
+        <p>$8.000</p>
+        <button onclick="agregarAlCarrito('Cojín personalizado', 8000)">Agregar al carrito</button>
+      </div>
     </div>
   </section>
+
+  <!-- Sección carrito -->
+  <section id="carrito" class="carrito">
+    <h2>Tu Carrito 🛒</h2>
+    <ul id="carrito-items"></ul>
+    <p id="carrito-total">Total: $0</p>
+  </section>
+
+  <!-- Sección contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>📱 WhatsApp: <a href="https://wa.me/56951055635" target="_blank">+569 5105 5635</a></p>
+    <p>📷 Instagram: <a href="https://instagram.com/" target="_blank">@sublimacath</a></p>
+    <p>📘 Facebook: <a href="https://facebook.com/" target="_blank">SublimaCath</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SublimaCath - Personaliza tu mundo</p>
+  </footer>
 </body>
 </html>
