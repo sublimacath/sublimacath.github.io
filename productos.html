@@ -1,41 +1,35 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Productos | SublimaCath</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SublimaCath — Productos</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-nombre">
-      <img src="logo_sin_fondo.png" alt="Logo SublimaCath" class="logo-portada"/>
-      <span class="titulo-nav">SublimaCath</span>
-    </div>
-    <ul class="menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="carrito.html">Carrito</a></li>
-      <li><a href="contacto.html">Contacto y Redes</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="logo">SublimaCath</div>
+    <nav class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="envios.html">Métodos de envío</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="carrito.html" class="carrito-link">Carrito <span id="cart-count" class="badge">0</span></a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn2">☰</button>
+  </header>
 
-  <section class="info">
-    <h2>Productos</h2>
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="taza1.jpg" alt="Taza personalizada" />
-        <h3>Taza personalizada</h3>
-        <p>$5.000</p>
-        <button>Añadir al carrito</button>
-      </div>
-      <div class="producto">
-        <img src="vinilo1.jpg" alt="Vinilo decorativo" />
-        <h3>Vinilo decorativo</h3>
-        <p>$3.500</p>
-        <button>Añadir al carrito</button>
-      </div>
-    </div>
-  </section>
+  <main class="container">
+    <section>
+      <h1>Productos</h1>
+      <div id="productsList" class="products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SublimaCath — Personaliza tu mundo</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

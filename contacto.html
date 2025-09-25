@@ -1,29 +1,37 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contacto | SublimaCath</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SublimaCath — Contacto</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-nombre">
-      <img src="logo_sin_fondo.png" alt="Logo SublimaCath" class="logo-portada"/>
-      <span class="titulo-nav">SublimaCath</span>
-    </div>
-    <ul class="menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="carrito.html">Carrito</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="logo">SublimaCath</div>
+    <nav class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="envios.html">Métodos de envío</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="carrito.html" class="carrito-link">Carrito <span id="cart-count" class="badge">0</span></a>
+    </nav>
+  </header>
 
-  <section class="info">
-    <h2>Contacto y Redes Sociales</h2>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/56951055635">+56 9 5105 5635</a></p>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sublimacath" target="_blank">@sublimacath</a></p>
-  </section>
+  <main class="container">
+    <h1>Contacto</h1>
+    <form id="contactForm">
+      <label>Nombre<input type="text" id="name" required></label>
+      <label>Email<input type="email" id="email" required></label>
+      <label>Mensaje<textarea id="message" rows="4" required></textarea></label>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>SublimaCath — Personaliza tu mundo</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
